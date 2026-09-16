@@ -22,14 +22,12 @@ def webhook():
 
         return "Token inválido", 403
 
-    # Recebimento de mensagens
+    # Mensagens recebidas
     if request.method == "POST":
-        data = request.get_json()
-
-        print("📩 Mensagem recebida:")
-        print(data)
-
+        print("📩 Webhook recebido:", request.json)
         return "EVENT_RECEIVED", 200
+
+    return "OK", 200
 
 
 if __name__ == "__main__":
