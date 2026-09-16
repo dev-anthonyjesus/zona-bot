@@ -1,1 +1,1 @@
-
+print("🟢 ZONA BOT iniciado!")
